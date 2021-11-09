@@ -6,7 +6,6 @@
 (:predicates
     (at ?agent - object ?from - block)
     (adjacent ?from - block ?to - block)
-    (clear ?to)
 )
 
 (:action move
@@ -14,8 +13,6 @@
     :precondition (and 
         (at ?agent ?from)
         (adjacent ?from ?to)
-        (clear ?to)
-
     )
     :effect (and 
         (not (at ?agent ?from))
